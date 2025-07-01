@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/samsung/dm1q/device.mk)
 
-# Inherit from the LineageOS configuration.
+# Inherit from the Lineage configuration.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_dm1q
@@ -30,7 +30,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Qualcomm Snapdragon 8 Gen 2" \
     RisingMaintainer="3kz"
 
-RISING_MAINTAINER := Niv
+RISING_MAINTAINER := 3kz
 
 TARGET_ENABLE_BLUR := true
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
