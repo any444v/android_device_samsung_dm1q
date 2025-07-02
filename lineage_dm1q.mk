@@ -8,17 +8,18 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from the device configuration.
+# Inherit from dm1q device
 $(call inherit-product, device/samsung/dm1q/device.mk)
 
-# Inherit from the Lineage configuration.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_dm1q
 PRODUCT_DEVICE := dm1q
+PRODUCT_MANUFACTURER := samsung
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-S911B
-PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
@@ -27,9 +28,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=samsung/dm1qxxx/dm1q:15/AP3A.240905.015.A2/S911BXXS8DYF1:user/release-keys \
     DeviceProduct=dm1qxxx \
     SystemName=dm1qxxx \
-    RisingChipset="Snapdragon 8 Gen 2" \
+    RisingChipset="Snapdragon® 8 Gen 2" \
     RisingMaintainer="3kz"
 
+# RisingOS variables
 RISING_MAINTAINER := 3kz
 
 TARGET_ENABLE_BLUR := true
